@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gift">
     <div class="gift-tie-1"></div>
     <div class="gift-tie-2"></div>
     <div class="gift-top"></div>
@@ -13,4 +13,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.gift {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
