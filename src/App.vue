@@ -1,17 +1,16 @@
 <template>
   <div id="app">
     <h1>Monty Hall problem</h1>
-    <gift />
+    <Door number="1" :hasGift="false" />
   </div>
 </template>
 
 <script>
-import Gift from "./components/Gift.vue";
+import Door from "./components/Door.vue";
 
 export default {
-  components: { Gift },
   name: "App",
-  comments: { Gift },
+  components: { Door },
 };
 </script>
 
