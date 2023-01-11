@@ -10,6 +10,12 @@ export default {
     number: {},
     hasGift: { type: Boolean },
   },
+  data: function () {
+    return {
+      open: false,
+      selected: false,
+    };
+  },
 };
 </script>
 
