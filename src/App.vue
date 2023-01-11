@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>Monty Hall problem</h1>
+    <gift />
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 import Gift from "./components/Gift.vue";
 
 export default {
+  components: { Gift },
   name: "App",
   comments: { Gift },
 };
