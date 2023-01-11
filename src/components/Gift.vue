@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <div class="gift-tie-1"></div>
+    <div class="gift-tie-2"></div>
+    <div class="gift-top"></div>
+    <div class="gift-body"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Gift-component",
+};
+</script>
+
+<style></style>

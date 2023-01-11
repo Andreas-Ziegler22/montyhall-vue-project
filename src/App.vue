@@ -5,7 +5,12 @@
 </template>
 
 <script>
-export default {};
+import Gift from "./components/Gift.vue";
+
+export default {
+  name: "App",
+  comments: { Gift },
+};
 </script>
 
 <style>
