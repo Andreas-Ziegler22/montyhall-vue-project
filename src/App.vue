@@ -1,8 +1,15 @@
 <template>
   <div id="app">
     <h1>Monty Hall problem</h1>
-
-    <Door number="1" :hasGift="true"></Door>
+    <div v-if="!started">
+      <label for="doorsAmount">How many doors?</label>
+      <input
+        type="text"
+        id="doorsAmount"
+        size="3"
+        v-model.number="doorsAmount"
+      />
+    </div>
   </div>
 </template>
 
@@ -12,6 +19,13 @@ import Door from "./components/Door.vue";
 export default {
   name: "App",
   components: { Door },
+  data: function () {
+    return {
+      started: false,
+      doorsAmount: 3,
+      selectedDoor: null,
+    };
+  },
 };
 </script>
 
