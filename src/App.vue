@@ -1,14 +1,27 @@
 <template>
   <div id="app">
     <h1>Monty Hall problem</h1>
-    <div v-if="!started">
-      <label for="doorsAmount">How many doors?</label>
-      <input
-        type="text"
-        id="doorsAmount"
-        size="3"
-        v-model.number="doorsAmount"
-      />
+    <div class="form">
+      <div v-if="!started">
+        <label for="doorsAmount">How many doors?</label>
+        <input
+          type="text"
+          id="doorsAmount"
+          size="3"
+          v-model.number="doorsAmount"
+        />
+      </div>
+      <div v-if="!started">
+        <label for="selectedDoor">What is the winning door?</label>
+        <input
+          type="text"
+          id="doorsAmount"
+          size="3"
+          v-model.number="selectedDoor"
+        />
+      </div>
+      <button v-if="!started" @click="started = true">Start</button>
+      <button v-if="started" @click="started = false">Restart</button>
     </div>
   </div>
 </template>
