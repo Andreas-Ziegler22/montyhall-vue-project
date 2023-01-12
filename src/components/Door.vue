@@ -1,11 +1,15 @@
 <template>
   <div class="door-area">
-    <div class="door-frame" :class="{ selected }">
+    <div class="door-frame" :class="{ selected: selected && !open }">
       <Gift v-if="open && hasGift" />
     </div>
-    <div class="door" @click="selected = !selected">
+    <div class="door" :click="{ open }" @click="selected = !selected">
       <div class="number" :class="{ selected }">{{ number }}</div>
-      <div class="knobDoor" :class="{ selected }"></div>
+      <div
+        class="knobDoor"
+        :class="{ selected }"
+        @click.stop="open = true"
+      ></div>
     </div>
   </div>
 </template>
@@ -94,5 +98,17 @@ export default {
 
 .door > .knobDoor.selected {
   background-color: yellow;
+}
+
+.door.open {
+  background-color: #0007;
+}
+
+.door.open .knobDoor {
+  display: none;
+}
+
+.door.open .number {
+  display: none;
 }
 </style>
