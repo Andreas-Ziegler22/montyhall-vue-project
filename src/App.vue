@@ -23,6 +23,11 @@
       <button v-if="!started" @click="started = true">Start</button>
       <button v-if="started" @click="started = false">Restart</button>
     </div>
+    <div class="doors" v-if="started">
+      <div v-for="i in doorsAmount" :key="i">
+        <Door :hasGift="i === selectedDoor" :number="i" />
+      </div>
+    </div>
   </div>
 </template>
 
