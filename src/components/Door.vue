@@ -3,7 +3,7 @@
     <div class="door-frame" :class="{ selected: selected && !open }">
       <Gift v-if="open && hasGift" />
     </div>
-    <div class="door" :click="{ open }" @click="selected = !selected">
+    <div class="door" :class="{ open }" @click="selected = !selected">
       <div class="number" :class="{ selected }">{{ number }}</div>
       <div
         class="knobDoor"
@@ -95,19 +95,15 @@ export default {
 .door > .number.selected {
   color: yellow;
 }
-
 .door > .knobDoor.selected {
   background-color: yellow;
 }
-
 .door.open {
   background-color: #0007;
 }
-
 .door.open .knobDoor {
   display: none;
 }
-
 .door.open .number {
   display: none;
 }
