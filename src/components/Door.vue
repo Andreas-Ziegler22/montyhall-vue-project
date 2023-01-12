@@ -1,7 +1,7 @@
 <template>
   <div class="door-area">
     <div class="door-frame" :class="{ selected: selected && !open }">
-      <Gift v-if="open && hasGift" />
+      <Gift v-if="open && hasGift"></Gift>
     </div>
     <div class="door" :class="{ open }" @click="selected = !selected">
       <div class="number" :class="{ selected }">{{ number }}</div>
@@ -18,7 +18,7 @@
 import Gift from "./Gift.vue";
 
 export default {
-  name: "Door-component",
+  name: "Door-Component",
   comments: { Gift },
   props: {
     number: {},

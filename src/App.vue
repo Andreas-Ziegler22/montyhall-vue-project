@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h1>Monty Hall problem</h1>
-    <Door number="1" :hasGift="true" />
+
+    <Door number="1" :hasGift="true"></Door>
   </div>
 </template>
 
