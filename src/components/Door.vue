@@ -29,4 +29,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+:root{
+  --door-border: 5px solid brown:
+}
+
+.door-area{
+  position: relative;
+  width: 200px;
+  height: 310px;
+  border-bottom: 10px solid #aaa;
+}
+</style>
